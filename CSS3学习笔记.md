@@ -6,8 +6,8 @@
 
 #### 弹性盒子flex-box
 
-兼容性:  display:flex -- IE11
-         display:-ms-flex -- IE10
+兼容性:&emsp;display:flex -- IE11</br>
+&emsp;&emsp;display:-ms-flex -- IE10
 
 兼容前缀:`-webkit-`、`-moz-`
 
@@ -39,7 +39,7 @@
 
 `flex-direction`属性指定了主轴的方向，进而指定了弹性子元素在父容器中的排列方向
 
-语法: flex-direction: row | row-reverse | column | column-reverse
+语法:&emsp;flex-direction: row | row-reverse | column | column-reverse
 
 值:</br>
 &emsp;&emsp;row: 横向从左到右排列，默认的排列方式</br>
@@ -47,40 +47,40 @@
 &emsp;&emsp;column: 纵向从上到下排列</br>
 &emsp;&emsp;column-reverse: 纵向从下到上排列
 
-作用元素：
-    display为flex的弹性容器，也就是父元素
+作用元素:</br>
+&emsp;&emsp;display为flex的弹性容器，也就是父元素
 
 #### justify-content(主轴内容对齐)
 
 `justify-content`属性应用在弹性容器上，把弹性项沿着弹性容器的主轴线对齐
 
-语法: justify-content: flex-start | flex-end | center | space-between | space-around
+语法:&emsp;justify-content: flex-start | flex-end | center | space-between | space-around
 
-值:
-    flex-start: 弹性项目向行头紧挨着填充，默认值。第一个弹性项的main-start外边距边线被放置在该行的main-start边线，而后续弹性项依次平齐摆放。可以理解为左对齐，也就是float：left实现的位移效果
-    flex-end: 弹性项目向行尾紧挨着填充。第一个弹性项的main-end外边距边线被放置在该行的main-end边线，而后续弹性项依次平齐摆放。可以理解为右对齐排列
-    center: 弹性项目居中紧挨着填充
-    space-between: 弹性项目平均分布在该行上如果剩余空间为负或者只有一个弹性项，则该值等同于flex-start。否则，第1个弹性项的外边距和行的main-start边线对齐，而最后1个弹性项的外边距和行的main-end边线对齐，然后剩余的弹性项分布在该行上，相邻项目的间隔相等。
-    space-around: 弹性项目平均分布在该行上，两边留有一般的间隔空间。如果剩余空间为负或者只有一个弹性项，则该值等同于center。否则，弹性项目沿该行分布，且彼此间隔相等（比如是20px），同时首尾两边和弹性容器之间留有一半的间隔（1/2*20px=10px）
+值:</br>
+&emsp;&emsp;flex-start: 弹性项目向行头紧挨着填充，默认值。第一个弹性项的main-start外边距边线被放置在该行的main-start边线，而后续弹性项依次平齐摆放。可以理解为左对齐，也就是float：left实现的位移效果</br>
+&emsp;&emsp;flex-end: 弹性项目向行尾紧挨着填充。第一个弹性项的main-end外边距边线被放置在该行的main-end边线，而后续弹性项依次平齐摆放。可以理解为右对齐排列
+&emsp;&emsp;center: 弹性项目居中紧挨着填充</br>
+&emsp;&emsp;space-between: 弹性项目平均分布在该行上如果剩余空间为负或者只有一个弹性项，则该值等同于flex-start。否则，第1个弹性项的外边距和行的main-start边线对齐，而最后1个弹性项的外边距和行的main-end边线对齐，然后剩余的弹性项分布在该行上，相邻项目的间隔相等。</br>
+&emsp;&emsp;space-around: 弹性项目平均分布在该行上，两边留有一般的间隔空间。如果剩余空间为负或者只有一个弹性项，则该值等同于center。否则，弹性项目沿该行分布，且彼此间隔相等（比如是20px），同时首尾两边和弹性容器之间留有一半的间隔（1/2*20px=10px）
 
-作用元素：
-    弹性盒子，即父元素
+作用元素:</br>
+&emsp;&emsp;弹性盒子，即父元素
 
-效果图：
+效果图:
 ![linear](http://www.runoob.com/wp-content/uploads/2016/04/2259AD60-BD56-4865-8E35-472CEABF88B2.jpg)
 
 #### align-items(纵轴内容对齐)
 
 `align-items`属性设置或检索弹性盒子元素在侧轴(纵轴)方向上的对齐方式
 
-语法: align-items: flex-start | flex-end | center | baseline | stretch
+语法:&emsp;align-items: flex-start | flex-end | center | baseline | stretch
 
-值:
-    flex-start: 弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界，即贴着顶部，弹性元素高度若无设置则自适应自身内容
-    flex-end: 弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界，即贴着底部，元素高度同start
-    center: 弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）
-    baseline(???): 如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐
-    stretch: 如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制
+值:</br>
+&emsp;&emsp;flex-start: 弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界，即贴着顶部，弹性元素高度若无设置则自适应自身内容</br>
+&emsp;&emsp;flex-end: 弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界，即贴着底部，元素高度同start</br>
+&emsp;&emsp;center: 弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）</br>
+&emsp;&emsp;baseline(???): 如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐</br>
+&emsp;&emsp;stretch: 如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制
 
 效果图:
 ![linear](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png)
@@ -89,14 +89,14 @@
 
 `flex-wrap`属性用于指定弹性盒子的子元素换行方式
 
-语法: flex-wrap: nowrap | wrap | wrap-reverse | initial | inherit
+语法:&emsp;flex-wrap: nowrap | wrap | wrap-reverse | initial | inherit
 
-值:
-    nowrap: 默认，弹性容器为单行，即不换行。该情况下弹性子项可能会溢出容器
-    wrap: 弹性容器为多行，即换行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行
-    wrap-reverse: 反转wrap排列，从左下向右下排，若溢出则换行至上一行
-    initial: 设置CSS属性为它的默认值(IE不支持此关键字)
-    inherit: 继承
+值:</br>
+&emsp;&emsp;nowrap: 默认，弹性容器为单行，即不换行。该情况下弹性子项可能会溢出容器</br>
+&emsp;&emsp;wrap: 弹性容器为多行，即换行。该情况下弹性子项溢出的部分会被放置到新行，子项内部会发生断行</br>
+&emsp;&emsp;wrap-reverse: 反转wrap排列，从左下向右下排，若溢出则换行至上一行</br>
+&emsp;&emsp;initial: 设置CSS属性为它的默认值(IE不支持此关键字)</br>
+&emsp;&emsp;inherit: 继承
 
 wrap-reverse效果图:
 ![linear](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071009.jpg)
@@ -105,15 +105,15 @@ wrap-reverse效果图:
 
 `align-content`属性用于设置多根轴线(各行)的对齐方式，如果项目只有一根轴线(一行)，则该属性不起作用，因为flex布局默认只有一行，所以一般配合flex-wrap使用呈现多行的表现形式
 
-语法: align-contet: flex-start | flex-end | center | stretch | space-between | space-around
+语法:&emsp;align-contet: flex-start | flex-end | center | stretch | space-between | space-around
 
-值:
-    stretch: 默认，各行会伸展以占用剩余的空间。
-    flex-start: 各行向弹性盒容器的起始位置堆叠
-    flex-end: 各行向弹性盒容器的结束位置堆叠，注意此时弹性子元素的排列方式不会改变，改变的只是行的位置，所以很容易出现的情况为，元素1和元素2排列在第一行，元素3在第二行，这两行堆叠在弹性盒子底部
-    center: 各行向弹性盒容器的中间位置堆叠，行的高度不会改变，改变的只是行的位置，即使弹性盒子高度不够，行也会居中向上下两边等高溢出
-    space-between: 各行在弹性盒容器中平均分布，与stretch相同却又略有不同，stretch是类似正常文档流的等份分割容器全部高度后，将弹性子元素分别置于每份的左上角。而space-between则是垂直方向上，顶部和底部的元素各自贴着顶部和底部，中间行的元素位于行的垂直中间。相同点在于都对弹性盒子的所有容量进行了等份分割，不同点在于每份中弹性子元素的排列方式有所不同
-    space-around: 各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半。在垂直方向上，两端元素与两端保留一定间距，余下的高度等份分割，弹性子元素的排列方式同space-between
+值:</br>
+&emsp;&emsp;stretch: 默认，各行会伸展以占用剩余的空间。</br>
+&emsp;&emsp;flex-start: 各行向弹性盒容器的起始位置堆叠</br>
+&emsp;&emsp;flex-end: 各行向弹性盒容器的结束位置堆叠，注意此时弹性子元素的排列方式不会改变，改变的只是行的位置，所以很容易出现的情况为，元素1和元素2排列在第一行，元素3在第二行，这两行堆叠在弹性盒子底部</br>
+&emsp;&emsp;center: 各行向弹性盒容器的中间位置堆叠，行的高度不会改变，改变的只是行的位置，即使弹性盒子高度不够，行也会居中向上下两边等高溢出</br>
+&emsp;&emsp;space-between: 各行在弹性盒容器中平均分布，与stretch相同却又略有不同，stretch是类似正常文档流的等份分割容器全部高度后，将弹性子元素分别置于每份的左上角。而space-between则是垂直方向上，顶部和底部的元素各自贴着顶部和底部，中间行的元素位于行的垂直中间。相同点在于都对弹性盒子的所有容量进行了等份分割，不同点在于每份中弹性子元素的排列方式有所不同</br>
+&emsp;&emsp;space-around: 各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半。在垂直方向上，两端元素与两端保留一定间距，余下的高度等份分割，弹性子元素的排列方式同space-between
 
 效果图:
 ![linear](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png)
@@ -150,25 +150,25 @@ wrap-reverse效果图:
 
 `align-self`属性用于设置弹性子元素自身在纵轴方向上的对齐方式，他允许弹性子元素与其他弹性子元素又不一样的对齐方式，可覆盖align-items属性，默认值为auto。除了auto值，其他值的含义都和`align-items`完全一致
 
-语法： align-self: auto | flex-start | flex-end | center | baseline | stretch
+语法：&emsp;align-self: auto | flex-start | flex-end | center | baseline | stretch
 
-值：
-    auto: 如果'align-self'的值为'auto'，则其计算值为元素的父元素的'align-items'值，如果其没有父元素，则计算值为'stretch'
+值：</br>
+&emsp;&emsp;auto: 如果'align-self'的值为'auto'，则其计算值为元素的父元素的'align-items'值，如果其没有父元素，则计算值为'stretch'
 
 #### flex
 
 `flex`属性用于指定弹性子元素如何分配空间，是flex-grow，flex-shrink，flex-basis的简写，默认值为0 1 auto。后两个属性可选
 
-语法: flex: auto | initial | none | inherit | [ flex-grow ] || [ flex-shrink ] || [ flex-basis ]
+语法:&emsp;flex: auto | initial | none | inherit | [ flex-grow ] || [ flex-shrink ] || [ flex-basis ]
 
-值:
-    auto: 计算值为 1 1 auto
-    initial: 计算值为 0 1 auto
-    none: 计算值为 0 0 auto
-    inherit: 从父元素继承
-    [ flex-grow ]: 定义弹性盒子元素的扩展比率
-    [ flex-shrink ]: 定义弹性盒子元素的收缩比率
-    [ flex-basis ]: 定义弹性盒子元素的默认基准值
+值:</br>
+&emsp;&emsp;auto: 计算值为 1 1 auto</br>
+&emsp;&emsp;initial: 计算值为 0 1 auto</br>
+&emsp;&emsp;none: 计算值为 0 0 auto</br>
+&emsp;&emsp;inherit: 从父元素继承</br>
+&emsp;&emsp;[ flex-grow ]: 定义弹性盒子元素的扩展比率</br>
+&emsp;&emsp;[ flex-shrink ]: 定义弹性盒子元素的收缩比率</br>
+&emsp;&emsp;[ flex-basis ]: 定义弹性盒子元素的默认基准值
 
 #### flex-grow
 
@@ -192,19 +192,19 @@ wrap-reverse效果图:
 
 ### 总结
 
-主轴: X轴
+主轴:&emsp;X轴
 
-交叉轴: Y轴
+交叉轴:&emsp;Y轴
 
-项目:单个弹性子元素
+项目:&emsp;单个弹性子元素
 
-`justify-content`: 控制主轴上所有项目的对齐
+`justify-content`:&emsp;控制主轴上所有项目的对齐
 
-`align-items`: 控制交叉轴上所有项目的对齐
+`align-items`:&emsp;控制交叉轴上所有项目的对齐
 
-`align-self`: 控制交叉轴上的单个flex item的对齐
+`align-self`:&emsp;控制交叉轴上的单个flex item的对齐
 
-`align-content`: 控制“多条主轴”的flex items在交叉轴的对齐
+`align-content`:&emsp;控制“多条主轴”的flex items在交叉轴的对齐
 
-`flex-direction`: 改变主轴方向
+`flex-direction`:&emsp;改变主轴方向
 
