@@ -41,11 +41,11 @@
 
 语法: flex-direction: row | row-reverse | column | column-reverse
 
-值:
-    row: 横向从左到右排列，默认的排列方式
-    row-reverse: 横向从右到左排列
-    column: 纵向从上到下排列
-    column-reverse: 纵向从下到上排列
+值: /n
+&emsp;&emsp;row: 横向从左到右排列，默认的排列方式
+&emsp;&emsp;row-reverse: 横向从右到左排列
+&emsp;&emsp;column: 纵向从上到下排列
+&emsp;&emsp;column-reverse: 纵向从下到上排列
 
 作用元素：
     display为flex的弹性容器，也就是父元素
