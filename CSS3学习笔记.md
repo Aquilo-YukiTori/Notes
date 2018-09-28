@@ -192,11 +192,11 @@ wrap-reverse效果图:
 
 ### 总结
 
-主轴:&emsp;X轴
+`主轴`:&emsp;X轴
 
-交叉轴:&emsp;Y轴
+`交叉轴`:&emsp;Y轴
 
-项目:&emsp;单个弹性子元素
+`项目`:&emsp;单个弹性子元素
 
 `justify-content`:&emsp;控制主轴上所有项目的对齐
 
