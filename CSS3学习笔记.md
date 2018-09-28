@@ -41,7 +41,7 @@
 
 语法: flex-direction: row | row-reverse | column | column-reverse
 
-值:
+值:</br>
 &emsp;&emsp;row: 横向从左到右排列，默认的排列方式</br>
 &emsp;&emsp;row-reverse: 横向从右到左排列</br>
 &emsp;&emsp;column: 纵向从上到下排列</br>
