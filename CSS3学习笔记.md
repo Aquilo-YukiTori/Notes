@@ -1,10 +1,10 @@
-## css3
+# <font face='微软雅黑' color='#090'>css3</font>
 
-### flex布局
+## flex布局
 
-#### 弹性盒子及其属性
+### 弹性盒子及其属性
 
-##### 弹性盒子flex-box
+#### 弹性盒子flex-box
 
 兼容性:  display:flex -- IE11
          display:-ms-flex -- IE10
@@ -25,7 +25,7 @@
 
 注意，设为flex布局以后，子元素的float、clear和vertical-align属性将失效
 
-##### direction
+#### direction
 
 修改排列方式
 
@@ -35,7 +35,7 @@
 作用元素：
     父元素及以上，如body
 
-##### flex-direction(排列方向)
+#### flex-direction(排列方向)
 
 `flex-direction`属性指定了主轴的方向，进而指定了弹性子元素在父容器中的排列方向
 
@@ -50,7 +50,7 @@
 作用元素：
     display为flex的弹性容器，也就是父元素
 
-##### justify-content(主轴内容对齐)
+#### justify-content(主轴内容对齐)
 
 `justify-content`属性应用在弹性容器上，把弹性项沿着弹性容器的主轴线对齐
 
@@ -69,7 +69,7 @@
 效果图：
 ![linear](http://www.runoob.com/wp-content/uploads/2016/04/2259AD60-BD56-4865-8E35-472CEABF88B2.jpg)
 
-##### align-items(纵轴内容对齐)
+#### align-items(纵轴内容对齐)
 
 `align-items`属性设置或检索弹性盒子元素在侧轴(纵轴)方向上的对齐方式
 
@@ -85,7 +85,7 @@
 效果图:
 ![linear](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071011.png)
 
-##### flex-wrap(换行方式)
+#### flex-wrap(换行方式)
 
 `flex-wrap`属性用于指定弹性盒子的子元素换行方式
 
@@ -101,7 +101,7 @@
 wrap-reverse效果图:
 ![linear](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071009.jpg)
 
-##### align-content(多根轴线的纵轴对齐)
+#### align-content(多根轴线的纵轴对齐)
 
 `align-content`属性用于设置多根轴线(各行)的对齐方式，如果项目只有一根轴线(一行)，则该属性不起作用，因为flex布局默认只有一行，所以一般配合flex-wrap使用呈现多行的表现形式
 
@@ -118,7 +118,7 @@ wrap-reverse效果图:
 效果图:
 ![linear](http://www.ruanyifeng.com/blogimg/asset/2015/bg2015071012.png)
 
-##### flex-flow
+#### flex-flow
 
 `flex-flow`属性是flex-direction和flex-wrap属性的简写，默认值为row nowrap
 
@@ -128,25 +128,25 @@ wrap-reverse效果图:
 }
 ```
 
-#### 弹性子元素属性
+### 弹性子元素属性
 
-##### 排序
+#### 排序
 
 语法: order: (int)
 
 值: 用整数值来定义排列顺序，按数值大小排列，可以为负数
 
-##### 对齐
+#### 对齐
 
 设置"margin"值为"auto"值，自动获取弹性容器中剩余的空间。所以设置垂直方向margin值为"auto"，可以使弹性子元素在弹性容器的两上轴方向都完全居中。
 
 例如三个弹性子元素同一行排列，第一个子元素设置margin-right:auto，则会将此行中剩余的空间放置在第一个子元素的右边。
 
-##### 完美的居中
+#### 完美的居中
 
 用margin:auto就能使得弹性子元素在两轴方向上完美居中，默认flex为块级元素显示，也可以用inline-flex使其以行内元素形式显示，从而具有更多的兼容性
 
-##### align-self
+#### align-self
 
 `align-self`属性用于设置弹性子元素自身在纵轴方向上的对齐方式，他允许弹性子元素与其他弹性子元素又不一样的对齐方式，可覆盖align-items属性，默认值为auto。除了auto值，其他值的含义都和`align-items`完全一致
 
@@ -155,7 +155,7 @@ wrap-reverse效果图:
 值：
     auto: 如果'align-self'的值为'auto'，则其计算值为元素的父元素的'align-items'值，如果其没有父元素，则计算值为'stretch'
 
-##### flex
+#### flex
 
 `flex`属性用于指定弹性子元素如何分配空间，是flex-grow，flex-shrink，flex-basis的简写，默认值为0 1 auto。后两个属性可选
 
@@ -170,13 +170,13 @@ wrap-reverse效果图:
     [ flex-shrink ]: 定义弹性盒子元素的收缩比率
     [ flex-basis ]: 定义弹性盒子元素的默认基准值
 
-##### flex-grow
+#### flex-grow
 
 `flex-grow`属性定义项目(弹性子元素)的放大比例，默认为0，即如果存在剩余空间，也不放大。
 
 如果所有项目的flex-grow属性都为1，则它们将等分剩余空间（如果有的话）。如果一个项目的flex-grow属性为2，其他项目都为1，则前者占据的剩余空间将比其他项多一倍
 
-##### flex-shrink
+#### flex-shrink
 
 `flex-shrink`属性定义了项目的缩小比例，默认为1，即如果空间不足，该项目将缩小
 
@@ -184,13 +184,13 @@ wrap-reverse效果图:
 
 负值对该属性无效。
 
-##### flex-basis
+#### flex-basis
 
 `flex-basis`属性定义了在分配多余空间之前，项目占据的主轴空间(水平方向上的空间)。浏览器根据这个属性，计算主轴是否有多余空间，他的默认值是auto，即项目的本来大小
 
 它可以设为跟width和height属性一样的值，则项目将占据固定空间
 
-#### 总结
+### 总结
 
 主轴: X轴
 
