@@ -41,10 +41,10 @@
 
 语法: flex-direction: row | row-reverse | column | column-reverse
 
-值: /n
-&emsp;&emsp;row: 横向从左到右排列，默认的排列方式
-&emsp;&emsp;row-reverse: 横向从右到左排列
-&emsp;&emsp;column: 纵向从上到下排列
+值:
+&emsp;&emsp;row: 横向从左到右排列，默认的排列方式</br>
+&emsp;&emsp;row-reverse: 横向从右到左排列</br>
+&emsp;&emsp;column: 纵向从上到下排列</br>
 &emsp;&emsp;column-reverse: 纵向从下到上排列
 
 作用元素：
