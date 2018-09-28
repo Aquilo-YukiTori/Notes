@@ -6,7 +6,8 @@
 
 #### 弹性盒子flex-box
 
-兼容性:&emsp;display:flex -- IE11</br>
+兼容性</br>
+&emsp;&emsp;display:flex -- IE11</br>
 &emsp;&emsp;display:-ms-flex -- IE10
 
 兼容前缀:`-webkit-`、`-moz-`
