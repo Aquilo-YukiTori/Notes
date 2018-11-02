@@ -67,7 +67,21 @@ def func(x ,y):
 def nop():
 		pass
 ```
-
+<br>
+用内置函数isinstance()对参数进行类型检查
+```
+if not isinstance(para1, {int, float}):
+		raise TypeError('xxxxx')
+```
+对参数para1进行是否是int或float类型的检查，类型错误则抛出错误
+<br>
+函数返回多个值
+```
+`return x,y`
+在获取时可直接用i,j = func()
+```
+其实返回的是一个turple，在外部则用了解构赋值
+<br>
 
 
 
