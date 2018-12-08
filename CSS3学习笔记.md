@@ -191,6 +191,24 @@ wrap-reverse效果图:
 
 它可以设为跟width和height属性一样的值，则项目将占据固定空间
 
+#### box
+
+box是flex之前的草案命名，阶段逐次为box--flexbox--flex，所以flex是最新的也是之后推荐的命名，但因为有之前的草案命名以及各浏览器版本对其的兼容问题，所以推荐使用统一的兼容写法
+```
+.flex-container {
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: box;
+  display: flexbox;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+}
+```
+
 ### 总结
 
 `主轴`:&emsp;X轴
@@ -208,4 +226,49 @@ wrap-reverse效果图:
 `align-content`:&emsp;控制“多条主轴”的flex items在交叉轴的对齐
 
 `flex-direction`:&emsp;改变主轴方向
+
+## 定位相关
+
+### position属性
+
+#### 新增值 center
+
+偏移定位以拥有relative的父元素的中心点为参考点，盒子在其包含容器中垂直水平居中
+
+兼容性: 均不兼容
+
+#### 新增值 page(???)
+
+元素在分页媒体或者区域块内，元素的包含块始终是初始包含块，否则取决于每个absolute模式。
+
+兼容性: 均不兼容
+
+#### 新增值 sticky
+
+对象在常态时遵循常规文档流，就像是relative和fixed的合体，当在屏幕中时按常规文档流排版，当卷动到屏幕外时则表现如fixed
+
+兼容性:<br/>
+&emsp;&emsp;火狐32.0+<br/>
+&emsp;&emsp;Safari 6.1-9.0(-webkit)<br/>
+&emsp;&emsp;iOS Safari 6.0-9.0(-webkit)<br/>
+&emsp;&emsp;其他均不兼容
+
+### 绝对定位元素新增属性 clip(待替换)
+
+依据上-右-下-左的顺序提供自对象左上角为(0,0)坐标计算的四个偏移数值，其中任一数值都可用auto替换，即此边不剪切
+
+`clip: rect(0 auto 35px 10px)`
+
+注意: **必须将position的值设为absolute或者fixed，此属性方可使用**
+
+注意: **这个属性将被废弃，推荐使用`clip-path`代替**
+
+## 布局相关
+
+### display属性
+
+block与inline与inline-block的区别：<br>
+&emsp;&emsp;block使元素以块级元素的形式显示，特点为宽度默认独占一行，是父容器的100%，可以设置高度宽度行高以及顶和底边距
+&emsp;&emsp;inline则使元素以内联元素的形式显示，特点为高度和宽度总是自适应于他包含的内容，作为行内元素与其他元素在同一行，他的高度宽度行高及顶部和底部边距都是不可设置的
+&emsp;&emsp;inline-block可以称为行内块元素，特点大致与inline相同，不同点在于**他可以自己设置高度宽度行高以及顶部和底部边距**
 
