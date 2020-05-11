@@ -86,6 +86,18 @@
 * engrave
 * prallel
 * take out
+* organic
+* diet
+* spinster
+* play hooky
+* clucked
+* cackled
+* scratch
+* demand
+* foreseen
+* scientific establishment
+
+stay health
 
 ###主系表
 系动词:
@@ -97,6 +109,8 @@ look,taste,sound,smell
 
 主系表和主谓宾的一个根本区别就在于，主系表的系动词是无实义的，也即能被be动词替换的，而主谓宾的谓语动词是实义动词，无法被替换！
 
-
-
+###主谓
+此时的谓语是非及物动词，所以没有宾语，但为了句子意思完整，所以通常要后接从句，如定语从句等
+###主谓宾
+此时的谓语是及物动词，所以需要接宾语为谓语提供对象
 
